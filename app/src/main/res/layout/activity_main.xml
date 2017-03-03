@@ -1,68 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context="com.hixun.app.socketclient.MainActivity"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
         android:orientation="horizontal">
         <EditText
             android:id="@+id/ip_edt"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="ip"
             android:text="192.168.1.118"/>
         <EditText
             android:id="@+id/port_edt"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="port"
             android:text="5001"/>
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start"/>
+        <TextView
+            android:id="@+id/receive_txt"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:hint="data"/>
+        <EditText
+            android:id="@+id/msg_edt"
+            android:inputType="number"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:hint="input"
+            />
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="send"/>
+
+
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正弦"
+            />
+
     </LinearLayout>
-    <Button
-        android:id="@+id/start_btn"
-        android:layout_width="match_parent"
+
+    <SurfaceView
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="start"/>
-
-
-
-    <EditText
-        android:id="@+id/msg_edt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minLines="5"
-        android:hint="Please input your order..."
-        android:gravity="top"
         />
-    <Button
-        android:id="@+id/send_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="send"/>
-    <TextView
-        android:id="@+id/receive_txt"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="Showing received data"/>
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minLines="5"
-        android:hint="test"
-        android:gravity="top"
-        />
-    <Button
-        android:id="@+id/clear_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="clear"/>
+
 </LinearLayout>
